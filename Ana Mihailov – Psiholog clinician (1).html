@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ana Mihailov – Psiholog clinician</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  --bg:#fdf9fd; --surface:#f8eff7; --ink:#3a2a3f; --muted:#76617c; --accent:#9a5fa3; --accent-ink:#ffffff; --line:#ecdcec; --quote-bg:linear-gradient(135deg,#f1e0f3,#fae3ee); --quote-ink:#3a2a3f;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1d1720; --surface:#261d29; --ink:#f2e9f3; --muted:#bba8c0; --accent:#d4a8da; --accent-ink:#2a1a2e; --line:#3a2c3e; --quote-bg:linear-gradient(135deg,#3a2742,#472a40); --quote-ink:#f6ecf7; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1d1720; --surface:#261d29; --ink:#f2e9f3; --muted:#bba8c0; --accent:#d4a8da; --accent-ink:#2a1a2e; --line:#3a2c3e; --quote-bg:linear-gradient(135deg,#3a2742,#472a40); --quote-ink:#f6ecf7; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Nunito Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Lora,Georgia,serif;font-weight:600;line-height:1.2;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+.brand{font-family:Lora,serif;font-weight:600;font-size:1.15rem;text-decoration:none}
+nav a{margin-left:1.4rem;text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:3rem 0 4.5rem}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:1.1rem}
+.hero p{color:var(--muted);max-width:34rem;margin:0 0 1.8rem}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(1.08)}
+.photo{aspect-ratio:4/5;border-radius:999px 999px 1.5rem 1.5rem;background:var(--surface);overflow:hidden;border:1px solid var(--line)}
+.photo svg,.photo img{width:100%;height:100%;display:block;object-fit:cover}
+section{padding:4rem 0}
+h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:1.5rem}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem}
+.about p{margin:0 0 1rem;max-width:38rem}
+.facts{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--line)}
+.facts li{padding:.7rem 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.facts b{color:var(--ink)}
+.services{background:var(--surface)}
+.svc{display:grid;grid-template-columns:1fr auto;gap:.3rem 2rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.svc:first-of-type{border-top:1px solid var(--line)}
+.svc h3{font-size:1.25rem}
+.svc p{grid-column:1;margin:0;color:var(--muted);max-width:36rem}
+.price{grid-row:1/3;grid-column:2;align-self:center;text-align:right;font-family:Lora,serif;font-size:1.4rem;font-weight:600;color:var(--accent);white-space:nowrap}
+.price small{display:block;font:400 .85rem "Nunito Sans",sans-serif;color:var(--muted)}
+.note{color:var(--muted);font-size:.95rem;margin-top:1.2rem}
+.quote{background:var(--quote-bg);color:var(--quote-ink);text-align:center;padding:5rem 0}
+blockquote{margin:0 auto;max-width:42rem}
+blockquote p{font-family:Lora,serif;font-weight:500;font-size:clamp(1.5rem,3.6vw,2.3rem);line-height:1.35;margin:0 0 1.2rem}
+blockquote cite{font-style:normal;opacity:.8}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact p{margin:0 0 .6rem;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){
+  .hero,.about,.contact{grid-template-columns:1fr;gap:2rem}
+  .photo{max-width:320px;margin:0 auto;order:-1}
+  nav a{margin-left:1rem}
+  section{padding:3rem 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#acasa">Ana Mihailov</a>
+    <nav><a href="#despre">Despre</a><a href="#servicii">Servicii</a><a href="#contact">Contact</a></nav>
+  </header>
+  <div class="hero" id="acasa">
+    <div>
+      <h1>Un spațiu sigur în care să te auzi pe tine</h1>
+      <p>Sunt Ana Mihailov, psiholog clinician autonom. Lucrez cu deschidere, acceptare și căldură, ca să ajungem împreună la mai multă reziliență, sens și vitalitate.</p>
+      <a class="btn" href="#contact">Programează o ședință</a>
+    </div>
+    <!-- Pentru fotografia ta: înlocuiește blocul <svg> de mai jos cu <img src="..." alt="Ana Mihailov, psiholog clinician"> -->
+    <div class="photo" role="img" aria-label="Fotografie psiholog (loc rezervat)">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="400" height="500" fill="var(--surface)"/>
+        <circle cx="200" cy="190" r="70" fill="var(--line)"/>
+        <path d="M60 500c0-95 60-150 140-150s140 55 140 150z" fill="var(--line)"/>
+        <text x="200" y="440" text-anchor="middle" font-family="Nunito Sans,sans-serif" font-size="18" fill="var(--muted)">Fotografia ta aici</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<section id="despre">
+  <div class="wrap about">
+    <div>
+      <h2>Despre mine</h2>
+      <ul class="facts">
+        <li><b>Titlu:</b> Psiholog clinician autonom</li>
+        <li><b>Cod RUP:</b> 31325</li>
+        <li><b>Experiență:</b> 3 ani de practică</li>
+        <li><b>Locație:</b> IPEFE, Strada Samuil Vulcan 12D</li>
+      </ul>
+    </div>
+    <div>
+      <p>Cum e să te plimbi prin lume învăluit de un clopot de sticlă sau cu o piatră grea pe umeri? Dificultățile emoționale provoacă multă suferință.</p>
+      <p>Cred cu tărie în lucrul în echipă: amândoi cu mânicile suflecate, putem lucra colaborativ către o autoorganizare mai funcțională, mai rezilientă, care să conducă la sens și vitalitate.</p>
+      <p>Abordez durerea cu multă deschidere, acceptare și căldură.</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicii">
+  <div class="wrap">
+    <h2>Servicii și tarife</h2>
+    <div class="svc">
+      <h3>Consiliere psihologică</h3>
+      <p>Spațiu de sprijin pentru anxietate, stres, tristețe sau alte dificultăți emoționale.</p>
+      <div class="price">160 lei</div>
+    </div>
+    <div class="svc">
+      <h3>Consiliere și dezvoltare personală</h3>
+      <p>Pentru autocunoaștere, încredere în tine și schimbările pe care ți le dorești.</p>
+      <div class="price">160 lei</div>
+    </div>
+    <div class="svc">
+      <h3>Consiliere parentală</h3>
+      <p>Sprijin pentru părinți în relația cu copilul și în deciziile de zi cu zi.</p>
+      <div class="price">160 lei</div>
+    </div>
+    <div class="svc">
+      <h3>Consiliere pentru copii sau adolescenți</h3>
+      <p>Ședințe adaptate vârstei, cu implicarea părinților acolo unde este nevoie.</p>
+      <div class="price">160 lei</div>
+    </div>
+    <div class="svc">
+      <h3>Evaluare psihologică și eliberare raport de rezultate</h3>
+      <p>Evaluare psihologică urmată de un raport scris cu rezultatele.</p>
+      <div class="price">400 lei</div>
+    </div>
+    <p class="note">Pentru programări, scrie-mi pe e-mail.</p>
+  </div>
+</section>
+
+<div class="quote">
+  <div class="wrap">
+    <blockquote>
+      <p>„Amândoi cu mânicile suflecate, putem lucra către mai mult sens și vitalitate.”</p>
+      <cite>Ana Mihailov</cite>
+    </blockquote>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2>Programări</h2>
+      <p>Dacă vrei să colaborăm, te rog să-mi scrii pe e-mail și îți voi răspunde în 1–2 zile.</p>
+      <p style="margin-top:1.5rem"><a class="btn" href="mailto:psiholog.anamihailov@gmail.com">Trimite un e-mail</a></p>
+    </div>
+    <div>
+      <p><b>E-mail:</b> <a href="mailto:psiholog.anamihailov@gmail.com">psiholog.anamihailov@gmail.com</a></p>
+      <p><b>Locație:</b> Institutul de Psihoterapie Experiențială Focalizată pe Emoții (IPEFE), Strada Samuil Vulcan 12D</p>
+      <p><b>Cod RUP:</b> 31325</p>
+      <p><b>Răspuns:</b> în 1–2 zile</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Ana Mihailov, psiholog clinician autonom, cod RUP 31325.</div>
+</footer>
+</body>
+</html>
